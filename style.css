@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    padding: 2rem;
+}
+.search{
+    box-shadow: 0 0 8px 0px var(--light-mode-element-and-dark-mode-text);
+    padding: 16px;
+    color: rgb(164, 163, 163);
+    max-width: 350px;
+    width: 100%;
+}
+.dark-mode .search{
+    background-color: var(--dark-mode-element);
+    box-shadow: 0 0 8px 0px var(--dark-mode-element);
+    color: var(--light-mode-element-and-dark-mode-text);
+}
+.search input{
+    border: none;
+    outline: none;
+    padding: 0 16px;
+    width: 90%;
+    background-color: inherit;
+    color: inherit;
+}
+.filter-by-region select{
+    box-shadow: 0 0 8px 0px var(--light-mode-element-and-dark-mode-text);
+    margin-block: 32px;
+    padding: 1rem;
+    max-width: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.dark-mode .filter-by-region select{
+    box-shadow: 0 0 8px 0px var(--dark-mode-element);
+    background-color: var(--dark-mode-element);
+    color: var(--light-mode-element-and-dark-mode-text);
+
+}
+.countries-container{
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+.dark-mode .country-card{
+    background-color: var(--dark-mode-element);
+    color: var(--light-mode-element-and-dark-mode-text);
+}
+.country-card{
+    display: inline-block;
+    max-width: 350px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.237);
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease-in-out;
+    background-color: #f1f1f1;
+}
+.country-card:hover{
+    transform: scale(1.025);
+    box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.237);
+
+}
+.country-card img{
+    width: 100%;
+}
+.country-content{
+    padding: 0 1.5rem;
+}
+@media (width > 768px) {
+    .search-and-filter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .filter-by-region select{
+        max-width: 350px;
+        width: 100%;
+    }
+}

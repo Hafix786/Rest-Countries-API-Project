@@ -1,0 +1,44 @@
+:root{
+    --dark-mode-background: hsl(207, 26%, 17%);
+    --dark-mode-element: hsl(209, 23%, 22%);
+    --light-mode-background: hsl(0, 0%, 98%);
+    --light-mode-input: hsl(0, 0%, 52%);
+    --light-mode-text: hsl(200, 15%, 8%);
+    --light-mode-element-and-dark-mode-text: hsl(0, 0%, 100%);
+}
+
+body{
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+body.dark-mode{
+    background-color: var(--dark-mode-background);
+    color: var(--light-mode-element-and-dark-mode-text);
+}
+.header-container{
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+    
+}
+.dark-mode .header-container{
+    background-color: var(--dark-mode-element);
+    color: var(--light-mode-element-and-dark-mode-text);    
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    padding-inline: 24px;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+.header-content h3 a{
+    text-decoration: none;
+    color: inherit;
+}
+.change-theme{
+    cursor: pointer;
+}
+
+.dark-mode .border-countries a{ 
+    background-color: var(--dark-mode-element);
+}
