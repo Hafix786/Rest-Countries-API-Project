@@ -5,7 +5,7 @@ const filterByRegion = document.querySelector('.filter-by-region select')
 const searchInput = document.querySelector('.search input')
 
 let allCountries
-fetch('https://restcounatries.com/v3.1/all ')
+fetch('https://restcountries.com/v3.1/all ')
 .then(res => res.json())
 .then((data) => { 
     console.log(data);
