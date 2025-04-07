@@ -5,12 +5,18 @@ const filterByRegion = document.querySelector('.filter-by-region select')
 const searchInput = document.querySelector('.search input')
 
 let allCountries
-fetch('https://restcountries.com/v3.1/all ')
+fetch('https://restcounatries.com/v3.1/all ')
 .then(res => res.json())
 .then((data) => { 
     console.log(data);
     allCountries = data
     renderCards(data)    
+}).catch((err) => {
+     body.innerText = `Error! Cannot fetch api`
+     body.style.margin = '15rem 30rem'
+     body.style.color = 'red'
+     body.style.fontSize = '3rem'
+
 })
 
 filterByRegion.addEventListener('change', (e) => {
